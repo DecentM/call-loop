@@ -5,18 +5,14 @@
   },
   "plugins": [
     "html",
-    "vue",
     "security",
-    "async",
-    "ava"
+    "async"
   ],
   "extends": [
     "standard",
-    "nodesecurity",
-    "plugin:vue/base"
+    "nodesecurity"
   ],
   "rules": {
-    "flowtype/no-types-missing-file-annotation": 0,
     "async/missing-await-in-async-fn": 0,
     "comma-dangle": [2,"always"],
     "no-cond-assign": [2,"always"],
