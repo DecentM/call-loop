@@ -189,11 +189,12 @@ fi
 printf "Waiting for a device to connect...\\n"
 adb wait-for-device
 
+printf "\\n"
 printf "$BOLD%s$RESET\\n" "Device connected:"
 deviceInfo
 
 printf "\\n"
-printf "Checking service status...\\n"
+printf "$BOLD%s$RESET\\n" "Checking service..."
 requireService
 
 printf "\\n"
