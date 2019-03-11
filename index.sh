@@ -58,7 +58,9 @@ checkCallStatus () {
 }
 
 getServiceStatus () {
-  adb shell dumpsys telephony.registry | grep mServiceState | uniq | cut -d '=' -f 2 | cut -d " " -f 1 | head -1
+  # Android 7
+  # adb shell dumpsys telephony.registry | grep mServiceState | uniq | cut -d '=' -f 2 | cut -d " " -f 1 | head -1
+  adb shell dumpsys telephony.registry | grep mServiceState | uniq | cut -d '=' -f 3 | cut -d "(" -f 1 | head -1
 }
 
 checkServiceStatus () {
